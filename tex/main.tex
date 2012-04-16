@@ -1,0 +1,62 @@
+\documentclass{scrartcl}
+
+% Gráficos complejos
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{placeins}
+
+% Soporte para el lenguaje español
+\usepackage{textcomp}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\DeclareUnicodeCharacter{B0}{\textdegree}
+\usepackage[spanish]{babel}
+
+% Formato de párrafo
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+
+% Formato de encabezados y pies de página
+\usepackage{fancyhdr}
+\fancyhead{}
+\fancyfoot{}
+\setlength\headheight{40pt}
+\fancyhead[L]{
+  Facultad de Ingeniería \\ 
+  Universidad de Buenos Aires
+}
+\fancyhead[R]{
+  75.09 - Análisis de la Información \\
+  Trabajo Práctico - ShoppyCard \\
+  Grupo 4
+}
+\fancyfoot[C]{
+  \thepage
+}
+\pagestyle{fancy}
+
+% Título
+\title{75.09 - Análisis de la Información}
+\subtitle{Trabajo Práctico - ShoppyCard - Grupo 4}
+\date{}
+\author{}
+
+% Documento
+\begin{document}
+
+% Titulo e indice
+\maketitle
+\tableofcontents
+\clearpage
+
+% Secciones del documento
+\part{Modelo de negocio}
+\input{tex/modnegocio}
+
+\part{Modelo de casos de uso}
+\input{tex/modcasosuso}
+
+\part{Glosario}
+\input{tex/glosario}
+
+\end{document}
+
