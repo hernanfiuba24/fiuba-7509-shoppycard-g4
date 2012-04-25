@@ -1,19 +1,53 @@
 \section{Actores}
 
-\begin{description}
-  \item[Cliente] Solicita una tarjeta y realiza compras con ella
-  \item[Comercio] Realiza ventas de bienes y/o servicios al cliente, quien paga por ellos utilizando la tarjeta
-  \item[Administrador] Configura y adminstra el sistema informático desarrollado
-\end{description}
-
-\section{Actores temporales}
+A continuación se describen los actores que se involucran, de una manera u otra,
+con el sistema.
 
 \begin{description}
-  \item[Mensualmente] Generación de resúmenes de cuenta por cada cliente y resúmenes de saldo por cada comercio
-  \item[Diariamente] Verificación de tarjetas vencidas
+
+\item[Cliente] \hfill \\
+Solicita una tarjeta y realiza compras con ella.
+
+\item[Comercio] \hfill \\
+Realiza ventas de bienes y/o servicios al cliente, quien paga por ellos
+utilizando la tarjeta.
+
+\item[Administrador] \hfill \\
+Configura y adminstra el sistema informático desarrollado manteniendo datos de
+referencia como ser los comercios y clientes registrados.
+
+\item[Mensualmente] \hfill \\
+Actor temporal mensual involucrado en los procesos de generación de resúmenes de
+cuenta por clientes y resúmenes de saldo por comercio.
+
+\item[Diariamente] \hfill \\
+Actor termporal diario involucrado en los procesos de verificación y renovación
+de tarjetas vencidas.
+
 \end{description}
 
-\section{Identificación de casos de uso}
+\section{Diagrama de casos de uso} \label{sec:diagrama_casos_uso}
 
-[TODO]
+En la figura~\ref{fig:modcasosuso:diagramacasos} se exponen los actores
+involucrados en la operación del sistema y su interacción con el mismo a través
+de los casos de uso identificados. En secciones subsiguientes se detallará cada
+uno de estos últimos.
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=0.9\textwidth]{images/mod_casosuso_diagrama.png}
+\end{center}
+\caption{Diagrama de casos de uso}
+\label{fig:modcasosuso:diagramacasos}
+\end{figure}
+
+\FloatBarrier
+
+\section{Detalle de casos de uso}
+
+En esta sección se detallan cada uno de los casos de uso presentados en el
+diagrama de casos de uso de la sección~\ref{sec:diagrama_casos_uso}.
+
+\subsection{Solicitar tarjeta}
+\input{tex/cu_solicitar_tarjeta}
 
