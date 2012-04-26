@@ -1,1 +1,66 @@
+\begin{tabularx}{\textwidth}{| r | X |}
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Use Case}: Cancelar renovación} \\
+
+\hline
+\multicolumn{2}{|c|}{\cellcolor[gray]{0.6}} \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Descripción}: Cancela el proceso de renovación automática de la tarjeta,
+de manera que la tarjeta sigue vigente hasta que expire. A partir de su
+expiración, la tarjeta se mantiene como inactiva y no puede ser utilizada.} \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Actores participantes}: Cliente} \\
+
+\hline
+\multicolumn{2}{|c|}{\cellcolor[gray]{0.6} } \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Flujos}} \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Flujo principal}} \\
+
+\hline
+1 & El cliente solicita la cancelación de la renovación automática de su
+tarjeta. \\
+\hline
+2 & El sistema solicita el número de tarjeta del cliente. \\
+\hline
+3 & El sistema valida que el número de tarjeta del cliente exista (E1.1 si no
+existe). \\
+\hline
+4 & El sistema valida que la tarjeta del cliente esté activa y su renovación no
+haya sido cancelada (E2.1 si está inactiva o su renovación ya ha sido
+cancelada). \\
+\hline
+5 & La tarjeta se marca como "no renovar". Se mantiene activa, pero en su fecha
+de expiración la tarjeta no se renovará automáticamente. \\
+\hline
+6 & Fin del caso de uso. \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Flujos de excepción}} \\
+
+\hline
+E1.1 & El sistema emite un mensaje de error informando que no existe una tarjeta
+con el número de tarjeta ingresado \\
+\hline
+E1.2 & El caso de uso continua en 6 \\
+
+\hline
+E2.1 & El sistema emite un mensaje de error informando que la tarjeta está
+inactiva o que su renovación ya ha sido cancelada. \\
+\hline
+E2.2 & El caso de uso continua en 6 \\
+
+\hline
+\end{tabularx}
 
