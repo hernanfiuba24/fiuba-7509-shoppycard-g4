@@ -1,4 +1,4 @@
-\section{Objectivo}
+\section{Objetivo}
 
 Desarrollar un sistema para emitir y administrar la operación de la tarjeta de
 crédito Shoppycard.
@@ -47,11 +47,6 @@ de comisiones.
 Registración de pagos individuales realizados por los clientes en concepto de
 los resúmenes de cuenta por los movimientos realizados.
 
-\subsection{Registración de pagos a comercios}
-
-Registración de pagos individuales a cada comercio por los saldos diarios
-informados.
-
 \subsection{Renovaciones de tarjetas}
 
 Renovación automática de las tarjetas de crédito, anualmente, así como la
@@ -96,9 +91,16 @@ intereses del mismo modo que los montos correspondientes a los consumos.
 No se contemplará ningún tipo de mecanismo para entregar el resumen mensual de
 consumos a los comercios ni el resumen mensual de cuenta a los clientes.
 
-\subsection{Cálculo de comisiones}
+\subsection{Pagos a comercios}
 
-Se cobrará una comisión porcentual al comercio por cada compra realizada.
+El primer día de cada mes se emitirá un reporte de saldos adeudados por
+comercio, indicando el monto que se le debe pagar a cada uno de ellos por los
+consumos realizados por los distintos clientes durante el mes anterior. Sobre
+este monto se descontará un 5\% de comisión sobre el monto bruto total.
+
+No se contemplará ningún medio para registrar los pagos realizados a los
+comercios por estos conceptos en este proyecto. Se recomienda considerar
+implementar un sistema de facturación más completo para controlar estos pagos.
 
 \section{Diagramas de actividades}
 
@@ -110,7 +112,7 @@ uno de ellos.
 
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=0.9\textwidth]{images/mod_negocio_act_global.png}
+\includegraphics[width=\textwidth]{images/mod_negocio_act_global.png}
 \end{center}
 \caption{Diagrama de actividades general de los procesos alcanzados por el
 proyecto.}
