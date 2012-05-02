@@ -1,0 +1,73 @@
+\begin{tabularx}{\textwidth}{| r | X |}
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Use Case}: Emitir resúmenes} \\
+
+\hline
+\multicolumn{2}{|c|}{\cellcolor[gray]{0.6}} \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Descripción}: Cálculo de intereses y comisiones mensuales y emisión de
+resúmenes asociados.} \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Actores participantes}: Mensualmente, Cliente, Comercio} \\
+
+\hline
+\multicolumn{2}{|c|}{\cellcolor[gray]{0.6} } \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Flujos}} \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Flujo principal}} \\
+
+\hline
+1 & El sistema procesa las compras realizadas por cada cliente en los distintos
+comercios. \\
+\hline
+2 & Por cada cliente: \\
+\hline
+2.1 & El sistema obtiene el interés por deuda acumulada calculando el 5\% del
+saldo de la cuenta del cliente. \\
+\hline
+2.2 & El sistema obtiene todos los movimientos informados para el cliente
+fechados en el mes anterior al mes actual. \\
+\hline
+2.3 & El sistema obtiene el nuevo saldo de la cuenta del cliente sumando al
+saldo adeudado el monto por interés obtenido en 2.1 más la suma de todos los
+importes de los movimientos obtenidos en 2.2. \\
+\hline
+2.4 & El sistema emite un informe impreso que detalla el saldo adeudado
+anteriormente, el interés calculado en 2.1, los movimientos obtenidos en 2.2 y
+el nuevo total adeudado calculado en 2.3. \\
+\hline
+2.5 & El sistema actualiza el saldo de la cuenta del cliente al valor obtenido en 2.3. \\
+\hline
+3 & Por cada comercio: \\
+\hline
+3.1 & El sistema determina todas las compras informadas por el comercio
+fechadas al mes anterior al mes actual. \\
+\hline
+3.2 & El sistema obtiene el valor bruto total sumando los importes de todos los
+movimientos obtenidos en 3.1. \\
+\hline
+3.3 & El sistema obtiene las comisiones cobradas al comercio calculando el 5\%
+del total bruto obtenido en 3.2. \\
+\hline
+3.4 & El sistema obtiene el importe total a pagar al comercio restando del
+valor bruto de 3.2 el valor de las comisiones de 3.3. \\
+\hline
+3.5 & El sistema emite un informe impreso que detalla los movimientos obtenidos
+en 3.1, el importe bruto calculado en 3.2, el valor de las comisiones calculado
+en 3.3 y el total a pagar al comercio calculado en 3.4. \\
+\hline
+4 & Fin del caso de uso. \\
+
+\hline
+\end{tabularx}
+
