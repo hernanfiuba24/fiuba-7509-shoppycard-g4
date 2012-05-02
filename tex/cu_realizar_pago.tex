@@ -1,0 +1,82 @@
+\begin{tabularx}{\textwidth}{| r | X |}
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Use Case}: Realizar pago} \\
+
+\hline
+\multicolumn{2}{|c|}{\cellcolor[gray]{0.6}} \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Descripción}: Registración de un pago a nombre de un cliente en
+concepto de los consumos realizados durante el mes anterior.} \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Actores participantes}: Cliente} \\
+
+\hline
+\multicolumn{2}{|c|}{\cellcolor[gray]{0.6} } \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Flujos}} \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Flujo principal}} \\
+
+\hline
+1 & El cliente se presenta en las oficinas de pagos para pagar el monto
+adeudado. \\
+\hline
+2 & El sistema solicita el DNI del cliente. (E1 si el cliente no existe). \\
+\hline
+3 & El sistema informa los datos del cliente para su validación, y solicita
+confirmación de que estos son correctos (E2 si los datos no son correctos). \\
+\hline
+4 & El sistema informa el monto adeudado por el cliente. (S1 si el monto
+adeudado es cero, S2 si la fecha del día no es del uno al diez de cada mes). \\
+\hline
+5 & El sistema solicita el importe abonado por el cliente y actualiza el saldo
+de su cuenta corriente.\\
+\hline
+6 & Fin del caso de uso. \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Flujos alternativos}} \\
+
+\hline
+S1.1 & El sistema emite un mensaje informando que el cliente no posee saldo
+adeudado. \\
+\hline
+S1.2 & El caso de uso continua en 6. \\
+
+\hline
+S2.1 & El sistema emite un mensaje informando que no se pueden registrar pagos
+fuera de término, e indicando el próximo periodo en el que se podrán registrar
+pagos (en las fechas uno al diez de cada mes). \\
+\hline
+S2.2 & El caso de uso continua en 6. \\
+
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Flujos de excepción}} \\
+
+\hline
+E1.1 & El sistema emite un mensaje de error informando que el cliente no
+existe. \\
+\hline
+E1.2 & El caso de uso continua en 6. \\
+
+\hline
+E2.1 & El sistema emite un mensaje de error informando que no se registrará
+ningún pago. \\
+\hline
+E2.2 & El caso de uso continua en 2. \\
+
+\hline
+\end{tabularx}
+
