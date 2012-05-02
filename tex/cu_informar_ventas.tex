@@ -1,0 +1,61 @@
+\begin{tabularx}{\textwidth}{| r | X |}
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Use Case}: Informar ventas} \\
+
+\hline
+\multicolumn{2}{|c|}{\cellcolor[gray]{0.6}} \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Descripción}: Registración de las compras sumarizadas por día en un
+comercio particular.} \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Actores participantes}: Comercio} \\
+
+\hline
+\multicolumn{2}{|c|}{\cellcolor[gray]{0.6} } \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Flujos}} \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Flujo principal}} \\
+
+\hline
+1 & El comercio informa las compras realizadas por los distintos clientes en un
+día particular, proporcionando la fecha para la cual se están informando las
+compras, el código del comercio que las está informando y un listado que indica
+el número de tarjeta y el importe sumarizado de todas las compras en la fecha
+informada para dicha tarjeta.\\
+\hline
+2 & El realiza las siguientes validaciones (E1 si alguna de ellas fallase). 
+\begin{enumerate}
+\item Debe existir un comercio con el código de comercio informado.
+\item La fecha proporcionada debe corresponder al mes actual.
+\item Los números de tarjeta proporcionados deben estar todos asociados cada
+uno a una tarjeta activa.
+\end{enumerate}
+\\
+\hline
+3 & El sistema registra las transacciones informadas. \\
+\hline
+4 & Fin del caso de uso. \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Flujos de excepción}} \\
+
+\hline
+E1.1 & El sistema emite un mensaje de error informando que los datos informados
+son incorrectos, adjuntando un mensaje que indica la valicación que falló. \\
+\hline
+E1.2 & El caso de uso continua en 4. \\
+
+\hline
+\end{tabularx}
+
