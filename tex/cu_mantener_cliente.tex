@@ -1,0 +1,65 @@
+\begin{tabularx}{\textwidth}{| r | X |}
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Use Case}: Mantener clientes} \\
+
+\hline
+\multicolumn{2}{|c|}{\cellcolor[gray]{0.6}} \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Descripción}: Mantenimiento de la información relacionada a los
+clientes.} \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Actores participantes}: Administrador} \\
+
+\hline
+\multicolumn{2}{|c|}{\cellcolor[gray]{0.6} } \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Flujos}} \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Flujo principal}} \\
+
+\hline
+1 & El sistema solicita el DNI, nombre, apellido o teléfono del cliente. \\
+\hline
+2 & El administrador proporciona cualquier combinación de los campos
+solicitados (por ejemplo, proporcionando nombre y apellido, o sólo nombre, o
+teléfono y DNI, etc.). \\
+\hline
+3 & El sistema valida que se haya proporcionado información en al menos uno de
+los campos (E1 si no se proporcionó ninguna información). \\
+\hline
+4 & El sistema realiza una búsqueda de todos los clientes registrados cuya
+información coincida, aunque sea parcialmente, con los datos proporcionados. \\
+\hline
+5 & El sistema muestra un listado con todos los clientes cuya información
+coincide, al menos parcialmente, con la información proporcionada. Dicho
+listado debe incluir DNI, nombre, apellido y teléfono del cliente. Por cada
+cliente, el sistema proporciona la opción de modificar dicha información. (S1
+si el administrador elige la opción de modificar el cliente). \\
+\hline
+6 & Fin del caso de uso. \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Flujos alternativos}} \\
+
+\hline
+S1.1 & El sistema solicita el nombre, apellido, DNI, límite de compra,
+domicilio, teléfono y número de tarjeta, completando por defecto cada campo con
+el valor almacenado actualmente en el sistema para el cliente. \\
+\hline
+S2.1 & El sistema almacena los nuevos valores de cada campo para el cliente. \\
+\hline
+S1.2 & El caso de uso continua en 6. \\
+
+\hline
+\end{tabularx}
+

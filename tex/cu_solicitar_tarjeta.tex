@@ -44,9 +44,11 @@ de su dni (E2.1 si no se da confirmación). \\
 documentación asociada a la garantía, y que esta es satisfactoria (E2.1 si no se
 da confirmación). \\
 \hline
-7 & El sistema almacena los datos del cliente y genera un número de tarjeta. \\
+7 & El sistema solicita el número de la tarjeta entregada al cliente. \\
 \hline
-8 & Fin del caso de uso. \\
+8 & El sistema almacena los datos del cliente. \\
+\hline
+9 & Fin del caso de uso. \\
 
 \hline
 \multicolumn{2}{|X|}{
@@ -56,13 +58,13 @@ da confirmación). \\
 E1.1 & El sistema emite un mensaje de error informando que el cliente ya posee
 una tarjeta. \\
 \hline
-E1.2 & El caso de uso continua en 8.\\
+E1.2 & El caso de uso continua en 9.\\
 
 \hline
 E2.1 & El sistema emite un mensaje de error informando que el cliente no
 presentó documentación obligatoria para continuar con la solicitud. \\
 \hline
-E2.2 & El caso de uso continua en 8. \\
+E2.2 & El caso de uso continua en 9. \\
 
 \hline
 \end{tabularx}
