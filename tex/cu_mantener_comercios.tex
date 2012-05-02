@@ -1,0 +1,93 @@
+\begin{tabularx}{\textwidth}{| r | X |}
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Use Case}: Mantener comercios} \\
+
+\hline
+\multicolumn{2}{|c|}{\cellcolor[gray]{0.6}} \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Descripción}: Mantenimiento de la información relacionada a los
+comercios.} \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Actores participantes}: Administrador} \\
+
+\hline
+\multicolumn{2}{|c|}{\cellcolor[gray]{0.6} } \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Flujos}} \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Flujo principal}} \\
+
+\hline
+1 & El sistema despliega las opciones de Alta, Baja o Consulta. \\
+\hline
+2 & El administrador elige una opción. (S1 para alta, S2 para baja, S3 para
+consulta). \\
+\hline
+3 & Fin del caso de uso. \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Flujos de excepción}} \\
+
+\hline
+E1.1 & El sistema muestra un mensaje de error informando que el código
+ingresado pertenece a otro comercio. \\
+\hline
+E1.2 & El caso de uso continua en 3. \\
+
+\hline
+E2.1 & El sistema muestra un mensaje de error informando que el código
+ingresado no pertenece a ningún comercio. \\
+\hline
+E2.2 & El caso de uso continua en 3. \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Flujos alternativos}} \\
+
+\hline
+S1.1 & El sistema solicita los datos del comercio (nombre y código). \\
+\hline
+S1.2 & El administrador ingresa los datos solicitados. \\
+\hline
+S1.3 & El sistema valida que el código no esté asociado a otro comercio
+preexistente (E1 si el código ya está asociado a otro comercio). \\
+\hline
+S1.4 & El sistema almacena el nuevo comercio. \\
+\hline
+S1.5 & El caso de uso continua en 3. \\
+
+\hline
+S2.1 & El sistema solicita el código del comercio a eliminar. \\
+\hline
+S2.2 & El administrador ingresa el código del comercio. \\
+\hline
+S2.3 & El sistema valida que el código ingresado pertenezca a un comercio
+existente (E2 si no es así). \\
+\hline
+S2.3 & El sistema muestra los datos asociados al comercio y pide confirmación
+de eliminación (3 si no se confirma la eliminación). \\
+\hline
+S2.4 & El sistema elimina el comercio y muestra un mensaje informativo
+indicando que el comercio fue eliminado. \\
+\hline
+S2.5 & El caso de uso continua en 3. \\
+
+\hline
+S3.1 & El sistema lista todos los comercios registrados, indicando el código y
+nombre de cada uno de ellos. \\
+\hline
+S3.2 & El caso de uso continua en 3. \\
+
+\hline
+\end{tabularx}
+
