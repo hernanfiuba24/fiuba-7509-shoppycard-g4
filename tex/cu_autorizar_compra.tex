@@ -1,0 +1,61 @@
+\begin{tabularx}{\textwidth}{| r | X |}
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Use Case}: Autorizar compra} \\
+
+\hline
+\multicolumn{2}{|c|}{\cellcolor[gray]{0.6}} \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Descripción}: Validación de las condiciones de uso de una tarjeta para
+realizar un pago en un comercio adherido.} \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Actores participantes}: Comercio} \\
+
+\hline
+\multicolumn{2}{|c|}{\cellcolor[gray]{0.6} } \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Flujos}} \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Flujo principal}} \\
+
+\hline
+1 & El comercio requiere al sistema que este valide una tarjeta informando el
+número de esta, el DNI del cliente y el importe de la venta que el cliente
+quiere abonar utilizando la misma. \\
+\hline
+2 & El sistema realiza las siguientes validaciones (S1 si alguna de las
+validaciones fallase). 
+\begin{enumerate}
+\item El número de tarjeta debe estar asociado a una tarjeta.
+\item La tarjeta debe estar activa.
+\item El DNI del cliente asociado a la tarjeta debe coincidir con el DNI
+informado.
+\item El saldo de la cuenta asociada a la tarjeta más el importe informado de
+la venta no debe superar el límite de saldo asociado a la cuenta.
+\end{enumerate} \\
+\hline
+3 & El sistema informa al comercio que la compra está autorizada. \\
+\hline
+4 & Fin del caso de uso. \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Flujos alternativos}} \\
+
+\hline
+S1.1 & El sistema informa al comercio que la compra no está autorizada,
+adjuntando en el mensaje el motivo por el cual no se autoriza la misma. \\
+\hline
+S1.2 & El caso de uso continua en 4. \\
+
+\hline
+\end{tabularx}
+
