@@ -1,0 +1,54 @@
+\begin{tabularx}{\textwidth}{| r | X |}
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Use Case}: Emitir resúmen Comercio} \\
+
+\hline
+\multicolumn{2}{|c|}{\cellcolor[gray]{0.6}} \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Descripción}: Cálculo de comisiones mensuales para cada comercio
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Actores participantes}: Mensualmente, Comercio} \\
+
+\hline
+\multicolumn{2}{|c|}{\cellcolor[gray]{0.6} } \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Flujos}} \\
+
+\hline
+\multicolumn{2}{|X|}{
+\textbf{Flujo principal}} \\
+
+\hline
+1 & El sistema llama a "Informar Movimientos Mensuales" procesando las compras realizadas por cada cliente en los distintos
+comercios. \\
+\hline
+2 & Por cada comercio: \\
+\hline
+2.1 & El sistema determina todas las compras informadas por el comercio
+fechadas al mes anterior al mes actual. \\
+\hline
+2.2 & El sistema obtiene el valor bruto total sumando los importes de todos los
+movimientos obtenidos en 2.1. \\
+\hline
+2.3 & El sistema obtiene las comisiones cobradas al comercio calculando el 5\%
+del total bruto obtenido en 2.2. \\
+\hline
+2.4 & El sistema obtiene el importe total a pagar al comercio restando del
+valor bruto de 2.2 el valor de las comisiones de 2.3. \\
+\hline
+2.5 & El sistema emite un informe impreso que detalla los movimientos obtenidos
+en 2.1, el importe bruto calculado en 2.2, el valor de las comisiones calculado
+en 2.3 y el total a pagar al comercio calculado en 2.4. \\
+\hline
+3 & Fin del caso de uso. \\
+
+\hline
+\end{tabularx}
+
