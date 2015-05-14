@@ -1,0 +1,1 @@
+Carpeta de trabajos prácticos del grupo 4 para el relevamiento del sistema ShoppyCard en la materia (75.09) Análisis de la Información en la Facultad de Ingeniería, Universidad de Buenos Aires.
